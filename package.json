@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production",
-    "dev": "webpack --mode=development"
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "devReasons": "webpack --mode development --profile --display-modules --display-reasons"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
   "homepage": "https://github.com/vladimirFr89/webpack-learning-external-libs#readme",
   "devDependencies": {
     "angular": "^1.6.9",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15"
   }

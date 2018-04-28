@@ -12,6 +12,22 @@ module.exports = {
         filename: 'app.js'
     },
 
+    module: {
+        rules: [{
+            test: /\.js$/,
+            include: /(frontend)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['env']
+                }
+            }
+        }],
+
+        noParse: /angular\/angular\.js/
+
+    },
+
     /*
     * для подключения библиотек, которых не установлено через npm
     * !!!ключ должен совпадать со значением в require!!!
