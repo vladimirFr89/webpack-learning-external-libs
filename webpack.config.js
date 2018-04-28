@@ -10,5 +10,13 @@ module.exports = {
     output:{
         path: __dirname + '/public',
         filename: 'app.js'
-    }
+    },
+
+    /*
+    * для подключения библиотек, которых не установлено через npm
+    * !!!ключ должен совпадать со значением в require!!!
+     */
+    externals: [{
+        jquery: '$'
+    }]
 };
